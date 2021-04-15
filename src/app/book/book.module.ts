@@ -6,6 +6,7 @@ import { ListComponent } from './list/list.component';
 import { CreateComponent } from './create/create.component';
 import { EditComponent } from './edit/edit.component';
 import { DeleteComponent } from './delete/delete.component';
+import {FormsModule} from '@angular/forms';
 
 
 @NgModule({
@@ -17,7 +18,8 @@ import { DeleteComponent } from './delete/delete.component';
   ],
   imports: [
     CommonModule,
-    BookRoutingModule
+    BookRoutingModule,
+    FormsModule
   ]
 })
 export class BookModule { }

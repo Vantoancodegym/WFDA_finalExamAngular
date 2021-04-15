@@ -10,8 +10,7 @@ const URL_BACKEND = environment.api_url;
 export class BookService {
 
   constructor(private httpClient: HttpClient) { }
-  getAllBooks(): Observable<IBook>[] {
-    // @ts-ignore
+  getAllBooks(): Observable<IBook[]> {
     return this.httpClient.get<IBook[]>(URL_BACKEND);
   }
   getBookById(id: number): Observable<IBook>{
