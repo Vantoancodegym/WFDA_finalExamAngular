@@ -1,1 +1,34 @@
-<p>list works!</p>
+<link href="//netdna.bootstrapcdn.com/twitter-bootstrap/2.3.2/css/bootstrap-combined.min.css" rel="stylesheet" id="bootstrap-css">
+<script src="//netdna.bootstrapcdn.com/twitter-bootstrap/2.3.2/js/bootstrap.min.js"></script>
+<script src="//code.jquery.com/jquery-1.11.1.min.js"></script>
+<!------ Include the above in your HEAD tag ---------->
+
+<div class="btn-toolbar">
+  <buttong><a routerLink="create">Create new book</a></buttong>
+</div>
+<p>Have {{books.length}} books</p>
+<div class="well">
+  <table class="table">
+    <thead>
+    <tr>
+      <th>Index</th>
+      <th>Title</th>
+      <th>Author</th>
+      <th colspan="3">Action</th>
+    </tr>
+    </thead>
+    <tbody>
+    <tr *ngFor="let book of books, index as i">
+      <td>{{i + 1}}</td>
+      <td>{{book.title}}</td>
+      <td>{{book.author}}</td>
+       <td><a routerLink="edit/{{book.id}}">Edit</a></td>
+       <td><a routerLink="detail/{{book.id}}">Detail</a></td>
+       <td><a routerLink="delete/{{book.id}}" >Delete</a></td>
+
+
+
+    </tr>
+    </tbody>
+  </table>
+</div>
